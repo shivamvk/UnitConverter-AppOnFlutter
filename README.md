@@ -15,7 +15,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
 
-Here is the look of the app version 3.0
+Here is the look of the app version 4.0
 
 <img src="https://github.com/shivamvk/UnitConverter-native-app-on-Flutter/blob/v4.0/Screenshot_20181227-195700.jpg" height="450px" width="250px">
-<img src="https://github.com/shivamvk/UnitConverter-native-app-on-Flutter/blob/v4.0/Screenshot_20181227-195700.jpg" height="450px" width="250px">
+<img src="https://github.com/shivamvk/UnitConverter-native-app-on-Flutter/blob/v4.0/Screenshot_20181227-195713.jpg" height="450px" width="250px">
