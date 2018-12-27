@@ -5,7 +5,7 @@ import 'package:meta/meta.dart';
 
 import 'category.dart';
 
-const double _kFlingVelocity = 2.0;
+const double _kFlingVelocity = 10.0;
 
 class _BackdropPanel extends StatelessWidget {
   const _BackdropPanel({

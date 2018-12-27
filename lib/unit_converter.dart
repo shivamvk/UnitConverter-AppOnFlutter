@@ -248,7 +248,22 @@ class _UnitConverterState extends State<UnitConverter> {
 
     return Padding(
       padding: _padding,
-      child: converter,
+      child: OrientationBuilder(
+        builder: (BuildContext context, Orientation orientation) {
+          if(orientation == Orientation.portrait){
+            return converter;
+          } else {
+            return SingleChildScrollView(
+              child: new Center(
+                child: new Container(
+                  width: 450.0,
+                  child: converter,
+                ),
+              ),
+            );
+          }
+        },
+      ),
     );
   }
 }
