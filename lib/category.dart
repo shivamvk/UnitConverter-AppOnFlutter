@@ -1,44 +1,47 @@
 import 'package:flutter/material.dart';
-import 'unit.dart';
 import 'converter_route.dart';
+import 'unit.dart';
 
-final double _rowHeight = 75.0;
-final BorderRadius _borderRadius = BorderRadius.circular(_rowHeight / 2);
+final _rowHeight = 75.0;
+final _borderRadius = BorderRadius.circular(_rowHeight / 2);
 
 class Category extends StatelessWidget {
-
   final String name;
-  final Color color;
-  final IconData icon;
+  final ColorSwatch color;
+  final IconData iconLocation;
   final List<Unit> units;
 
   const Category({
     Key key,
     @required this.name,
     @required this.color,
-    @required this.icon,
-    @required this.units
-  }) :
-  super(key : key);
+    @required this.iconLocation,
+    @required this.units,
+  })  : assert(name != null),
+        assert(color != null),
+        assert(iconLocation != null),
+        assert(units != null),
+        super(key: key);
 
   void _navigateToConverter(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute<Null>(
       builder: (BuildContext context) {
         return Scaffold(
-          appBar: new AppBar(
+          appBar: AppBar(
             elevation: 0.0,
             title: Text(
               name,
               style: Theme.of(context).textTheme.display1,
             ),
             centerTitle: true,
-            backgroundColor: color,
+            backgroundColor: Colors.white,
           ),
-          body: new ConverterRoute(
+          body: ConverterRoute(
             color: color,
             name: name,
             units: units,
           ),
+          resizeToAvoidBottomPadding: false,
         );
       },
     ));
@@ -46,34 +49,32 @@ class Category extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Material(
+    return Material(
       color: Colors.transparent,
-      child: new Container(
+      child: Container(
         height: _rowHeight,
-        child: new InkWell(
+        child: InkWell(
           borderRadius: _borderRadius,
-          highlightColor: color,
-          splashColor: color,
+          highlightColor: color['highlight'],
+          splashColor: color['splash'],
           onTap: () => _navigateToConverter(context),
-          child: new Padding(
+          child: Padding(
             padding: EdgeInsets.all(8.0),
-            child: new Row(
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                new Padding(
+              children: [
+                Padding(
                   padding: EdgeInsets.fromLTRB(8.0, 3.0, 8.0, 21.0),
-                  child: new Icon(
-                    icon,
-                    size: 40,
+                  child: Icon(
+                    iconLocation,
+                    size: 40.0,
                   ),
                 ),
-                new Center(
-                  child: new Text(
+                Center(
+                  child: Text(
                     name,
                     textAlign: TextAlign.center,
-                    style: new TextStyle(
-                      fontSize: 25,
-                    ),
+                    style: Theme.of(context).textTheme.headline,
                   ),
                 ),
               ],
@@ -83,5 +84,4 @@ class Category extends StatelessWidget {
       ),
     );
   }
-
 }
