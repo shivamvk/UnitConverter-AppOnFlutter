@@ -17,5 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 Here is the look of the app version 5.0
 
-<img src="https://github.com/shivamvk/UnitConverter-native-app-on-Flutter/blob/v5.0/Screenshot_20181227-231822.jpg" height="250px" width="450px">
-<img src="https://github.com/shivamvk/UnitConverter-native-app-on-Flutter/blob/v5.0/Screenshot_20181227-231831.jpg" height="250px" width="450px">
+<img src="https://github.com/shivamvk/UnitConverter-native-app-on-Flutter/blob/v5.0/Screenshot_20181227-231822.jpg" height="250px" width="450px"> <img src="https://github.com/shivamvk/UnitConverter-native-app-on-Flutter/blob/v5.0/Screenshot_20181227-231831.jpg" height="250px" width="450px">
